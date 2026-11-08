@@ -17,7 +17,7 @@ return new class extends Migration
         $table->string('shop_name');
         $table->string('phone', 20)->nullable();
         $table->text('address')->nullable();
-        $table->unsignedTinyInteger('status')->default(0); // 0 pending, 1 approved, 2 suspended
+        $table->unsignedTinyInteger('status')->default(0)->comment('0 pending, 1 approved, 2 suspended');
         $table->timestamps();
         });
     }

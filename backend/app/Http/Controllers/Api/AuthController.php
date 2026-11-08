@@ -15,7 +15,8 @@ class AuthController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users,email',
             'password' => 'required|string|min:8|confirmed',
-            'role' => 'required|in:2,3'
+            'role' => 'required|in:2,3',
+            'business_name' => 'required|string|max:255',
         ]);
 
         $user = User::create([
@@ -24,6 +25,12 @@ class AuthController extends Controller
             'password' => $request->password,
             'role' => $request->role
         ]);
+
+        if ($user->role == 2) {
+                $user->vendor()->create(['warehouse_name' => $request->business_name]);
+            } else {
+                $user->shop()->create(['shop_name' => $request->business_name]);
+            }
 
         return response()->json([
         'message' => 'User registered successfully', 
@@ -54,5 +61,12 @@ class AuthController extends Controller
         'token' => $token,
         'user' => $user,
     ]);
+}
+
+public function logout(Request $request)
+{
+    $request->user()->currentAccessToken()->delete();
+
+    return response()->json(['message' => 'Logged out']);
 }
 }

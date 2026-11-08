@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
 {
     Schema::table('users', function (Blueprint $table) {
-        $table->unsignedTinyInteger('role')->default(3)->after('password');   // 1 admin, 2 vendor, 3 shop owner
-        $table->unsignedTinyInteger('status')->default(0)->after('role');     // 0 pending, 1 approved, 2 suspended
+       $table->unsignedTinyInteger('role')->default(3)->after('password')->comment('1 admin, 2 vendor, 3 shop owner');
+        $table->unsignedTinyInteger('status')->default(0)->after('role')->comment('0 pending, 1 approved, 2 suspended');
     });
 }
 

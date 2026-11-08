@@ -20,7 +20,7 @@ return new class extends Migration
         $table->decimal('subtotal', 12, 2)->default(0);
         $table->decimal('discount', 12, 2)->default(0);
         $table->decimal('total', 12, 2)->default(0);
-        $table->unsignedTinyInteger('payment_status')->default(1); // 0 unpaid, 1 paid
+        $table->unsignedTinyInteger('payment_status')->default(1)->comment('0 unpaid, 1 paid');
         $table->timestamps();
         });
     }

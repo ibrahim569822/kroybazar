@@ -21,7 +21,7 @@ return new class extends Migration
         $table->string('image')->nullable();
         $table->decimal('wholesale_price', 12, 2);
         $table->unsignedInteger('stock')->default(0);
-        $table->unsignedTinyInteger('status')->default(1); // 0 inactive, 1 active
+        $table->unsignedTinyInteger('status')->default(1)->comment('0 inactive, 1 active');
         $table->timestamps();
         });
     }
