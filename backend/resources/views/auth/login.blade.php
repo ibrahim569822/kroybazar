@@ -31,7 +31,9 @@
 <h3>Sign In</h3>
 <h4>Please login to your KroyBazar account</h4>
 </div>
-
+@if (session('success'))
+<div class="alert alert-success">{{ session('success') }}</div>
+@endif
 @if ($errors->any())
 <div class="alert alert-danger">{{ $errors->first() }}</div>
 @endif
@@ -60,7 +62,9 @@
 </div>
 
 </form>
-
+<div class="signinform text-center">
+<h4>Don't have an account? <a href="/register" class="hover-a">Sign Up</a></h4>
+</div>
 </div>
 </div>
 <div class="login-img">
