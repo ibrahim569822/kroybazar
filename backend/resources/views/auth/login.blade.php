@@ -1,24 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>KroyBazar Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+<meta name="robots" content="noindex, nofollow">
+<title>Login - KroyBazar</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/favicon.jpg') }}">
+
+<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+
+<link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome/css/fontawesome.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome/css/all.min.css') }}">
+
+<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 </head>
-<body>
-<div class="container" style="max-width: 400px;">
-    <h2 class="mt-5 mb-4">KroyBazar Login</h2>
+<body class="account-page">
 
-    @if ($errors->any())
-        <div class="alert alert-danger">{{ $errors->first() }}</div>
-    @endif
+<div class="main-wrapper">
+<div class="account-content">
+<div class="login-wrapper">
+<div class="login-content">
+<div class="login-userset">
 
-    <form method="POST" action="/login">
-        @csrf
-        <input class="form-control mb-3" type="email" name="email" placeholder="Email" value="{{ old('email') }}">
-        <input class="form-control mb-3" type="password" name="password" placeholder="Password">
-        <button class="btn btn-dark w-100">Login</button>
-    </form>
+<div class="login-logo">
+<h2 class="text-center" style="color:#ff9f43; font-weight:700;">KroyBazar</h2>
 </div>
+
+<div class="login-userheading">
+<h3>Sign In</h3>
+<h4>Please login to your KroyBazar account</h4>
+</div>
+
+@if ($errors->any())
+<div class="alert alert-danger">{{ $errors->first() }}</div>
+@endif
+
+<form method="POST" action="/login">
+@csrf
+
+<div class="form-login">
+<label>Email</label>
+<div class="form-addons">
+<input type="email" name="email" value="{{ old('email') }}" placeholder="Enter your email address">
+<img src="{{ asset('assets/img/icons/mail.svg') }}" alt="img">
+</div>
+</div>
+
+<div class="form-login">
+<label>Password</label>
+<div class="pass-group">
+<input type="password" name="password" class="pass-input" placeholder="Enter your password">
+<span class="fas toggle-password fa-eye-slash"></span>
+</div>
+</div>
+
+<div class="form-login">
+<button type="submit" class="btn btn-login">Sign In</button>
+</div>
+
+</form>
+
+</div>
+</div>
+<div class="login-img">
+<img src="{{ asset('assets/img/login.jpg') }}" alt="img">
+</div>
+</div>
+</div>
+</div>
+
+<script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
+<script src="{{ asset('assets/js/feather.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('assets/js/script.js') }}"></script>
 </body>
 </html>
