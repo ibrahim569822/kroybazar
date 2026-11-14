@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Kroy Bazar | Dashboard')
+@section('title', 'Kroy Bazar | Vendor Dashboard')
 
 @section('content')
     <div class="page-wrapper">

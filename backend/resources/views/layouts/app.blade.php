@@ -42,16 +42,15 @@
     <div class="main-wrapper">
 
         <!-- ==================== Header ==================== -->
+                <!-- ==================== Header ==================== -->
         <div class="header">
 
-            <!-- Logo -->
             <div class="header-left active">
                 <a href="/" class="logo"><span style="color:#ff9f43; font-size:24px; font-weight:700;">KroyBazar</span></a>
                 <a href="/" class="logo-small"><span style="color:#ff9f43; font-size:20px; font-weight:700;">KB</span></a>
                 <a id="toggle_btn" href="javascript:void(0);"></a>
             </div>
 
-            <!-- Mobile Menu Button -->
             <a id="mobile_btn" class="mobile_btn" href="#sidebar">
                 <span class="bar-icon">
                     <span></span>
@@ -60,7 +59,6 @@
                 </span>
             </a>
 
-            <!-- Header Navigation -->
             <ul class="nav user-menu">
 
                 <!-- Search -->
@@ -69,18 +67,13 @@
                         <a href="javascript:void(0);" class="responsive-search">
                             <i class="fa fa-search"></i>
                         </a>
-
                         <form action="#">
                             <div class="searchinputs">
                                 <input type="text" placeholder="Search Here ...">
-
                                 <div class="search-addon">
-                                    <span>
-                                        <img src="{{ asset('assets/img/icons/closes.svg') }}" alt="Close">
-                                    </span>
+                                    <span><img src="{{ asset('assets/img/icons/closes.svg') }}" alt="Close"></span>
                                 </div>
                             </div>
-
                             <a class="btn" id="searchdiv">
                                 <img src="{{ asset('assets/img/icons/search.svg') }}" alt="Search">
                             </a>
@@ -88,241 +81,177 @@
                     </div>
                 </li>
 
-                <!-- Language Dropdown -->
+                <!-- Language -->
                 <li class="nav-item dropdown has-arrow flag-nav">
-                    <a class="nav-link dropdown-toggle"
-                       data-bs-toggle="dropdown"
-                       href="javascript:void(0);"
-                       role="button">
-
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);" role="button">
                         <img src="{{ asset('assets/img/flags/us1.png') }}" alt="English" height="20">
                     </a>
-
                     <div class="dropdown-menu dropdown-menu-right">
-
                         <a href="javascript:void(0);" class="dropdown-item">
-                            <img src="{{ asset('assets/img/flags/us.png') }}" alt="English" height="16">
-                            English
+                            <img src="{{ asset('assets/img/flags/us.png') }}" alt="English" height="16"> English
                         </a>
-
                         <a href="javascript:void(0);" class="dropdown-item">
-                            <img src="{{ asset('assets/img/flags/fr.png') }}" alt="French" height="16">
-                            French
+                            <img src="{{ asset('assets/img/flags/fr.png') }}" alt="French" height="16"> French
                         </a>
-
                         <a href="javascript:void(0);" class="dropdown-item">
-                            <img src="{{ asset('assets/img/flags/es.png') }}" alt="Spanish" height="16">
-                            Spanish
+                            <img src="{{ asset('assets/img/flags/es.png') }}" alt="Spanish" height="16"> Spanish
                         </a>
-
                         <a href="javascript:void(0);" class="dropdown-item">
-                            <img src="{{ asset('assets/img/flags/de.png') }}" alt="German" height="16">
-                            German
+                            <img src="{{ asset('assets/img/flags/de.png') }}" alt="German" height="16"> German
                         </a>
-
                     </div>
                 </li>
 
-                <!-- Notifications Dropdown -->
+                <!-- Notifications (demo data from the template) -->
                 <li class="nav-item dropdown">
-                    <a href="javascript:void(0);"
-                       class="dropdown-toggle nav-link"
-                       data-bs-toggle="dropdown">
-
+                    <a href="javascript:void(0);" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
                         <img src="{{ asset('assets/img/icons/notification-bing.svg') }}" alt="Notifications">
                         <span class="badge rounded-pill">4</span>
                     </a>
-
                     <div class="dropdown-menu notifications">
-
                         <div class="topnav-dropdown-header">
                             <span class="notification-title">Notifications</span>
                             <a href="javascript:void(0);" class="clear-noti">Clear All</a>
                         </div>
-
                         <div class="noti-content">
                             <ul class="notification-list">
 
                                 <li class="notification-message">
-                                    <a href="activities.html">
+                                    <a href="javascript:void(0);">
                                         <div class="media d-flex">
-
                                             <span class="avatar flex-shrink-0">
                                                 <img src="{{ asset('assets/img/profiles/avatar-02.jpg') }}" alt="">
                                             </span>
-
                                             <div class="media-body flex-grow-1">
                                                 <p class="noti-details">
-                                                    <span class="noti-title">John Doe</span>
-                                                    added new task
+                                                    <span class="noti-title">John Doe</span> added new task
                                                     <span class="noti-title">Patient appointment booking</span>
                                                 </p>
-
-                                                <p class="noti-time">
-                                                    <span class="notification-time">4 mins ago</span>
-                                                </p>
+                                                <p class="noti-time"><span class="notification-time">4 mins ago</span></p>
                                             </div>
-
                                         </div>
                                     </a>
                                 </li>
 
                                 <li class="notification-message">
-                                    <a href="activities.html">
+                                    <a href="javascript:void(0);">
                                         <div class="media d-flex">
-
                                             <span class="avatar flex-shrink-0">
                                                 <img src="{{ asset('assets/img/profiles/avatar-03.jpg') }}" alt="">
                                             </span>
-
                                             <div class="media-body flex-grow-1">
                                                 <p class="noti-details">
-                                                    <span class="noti-title">Tarah Shropshire</span>
-                                                    changed the task name
+                                                    <span class="noti-title">Tarah Shropshire</span> changed the task name
                                                     <span class="noti-title">Appointment booking with payment gateway</span>
                                                 </p>
-
-                                                <p class="noti-time">
-                                                    <span class="notification-time">6 mins ago</span>
-                                                </p>
+                                                <p class="noti-time"><span class="notification-time">6 mins ago</span></p>
                                             </div>
-
                                         </div>
                                     </a>
                                 </li>
 
                                 <li class="notification-message">
-                                    <a href="activities.html">
+                                    <a href="javascript:void(0);">
                                         <div class="media d-flex">
-
                                             <span class="avatar flex-shrink-0">
                                                 <img src="{{ asset('assets/img/profiles/avatar-06.jpg') }}" alt="">
                                             </span>
-
                                             <div class="media-body flex-grow-1">
                                                 <p class="noti-details">
-                                                    <span class="noti-title">Misty Tison</span>
-                                                    added
-                                                    <span class="noti-title">Domenic Houston</span>
-                                                    and
-                                                    <span class="noti-title">Claire Mapes</span>
-                                                    to project
+                                                    <span class="noti-title">Misty Tison</span> added
+                                                    <span class="noti-title">Domenic Houston</span> and
+                                                    <span class="noti-title">Claire Mapes</span> to project
                                                     <span class="noti-title">Doctor available module</span>
                                                 </p>
-
-                                                <p class="noti-time">
-                                                    <span class="notification-time">8 mins ago</span>
-                                                </p>
+                                                <p class="noti-time"><span class="notification-time">8 mins ago</span></p>
                                             </div>
-
                                         </div>
                                     </a>
                                 </li>
 
                                 <li class="notification-message">
-                                    <a href="activities.html">
+                                    <a href="javascript:void(0);">
                                         <div class="media d-flex">
-
                                             <span class="avatar flex-shrink-0">
                                                 <img src="{{ asset('assets/img/profiles/avatar-17.jpg') }}" alt="">
                                             </span>
-
                                             <div class="media-body flex-grow-1">
                                                 <p class="noti-details">
-                                                    <span class="noti-title">Rolland Webber</span>
-                                                    completed task
+                                                    <span class="noti-title">Rolland Webber</span> completed task
                                                     <span class="noti-title">Patient and Doctor video conferencing</span>
                                                 </p>
-
-                                                <p class="noti-time">
-                                                    <span class="notification-time">12 mins ago</span>
-                                                </p>
+                                                <p class="noti-time"><span class="notification-time">12 mins ago</span></p>
                                             </div>
-
                                         </div>
                                     </a>
                                 </li>
 
                                 <li class="notification-message">
-                                    <a href="activities.html">
+                                    <a href="javascript:void(0);">
                                         <div class="media d-flex">
-
                                             <span class="avatar flex-shrink-0">
                                                 <img src="{{ asset('assets/img/profiles/avatar-13.jpg') }}" alt="">
                                             </span>
-
                                             <div class="media-body flex-grow-1">
                                                 <p class="noti-details">
-                                                    <span class="noti-title">Bernardo Galaviz</span>
-                                                    added new task
+                                                    <span class="noti-title">Bernardo Galaviz</span> added new task
                                                     <span class="noti-title">Private chat module</span>
                                                 </p>
-
-                                                <p class="noti-time">
-                                                    <span class="notification-time">2 days ago</span>
-                                                </p>
+                                                <p class="noti-time"><span class="notification-time">2 days ago</span></p>
                                             </div>
-
                                         </div>
                                     </a>
                                 </li>
 
                             </ul>
                         </div>
-
                         <div class="topnav-dropdown-footer">
-                            <a href="activities.html">View all Notifications</a>
+                            <a href="javascript:void(0);">View all Notifications</a>
                         </div>
-
                     </div>
                 </li>
 
-                <!-- User Profile Dropdown -->
+                <!-- User dropdown: real name, role and Logout -->
                 <li class="nav-item dropdown has-arrow main-drop">
-                    <a href="javascript:void(0);"
-                       class="dropdown-toggle nav-link userset"
-                       data-bs-toggle="dropdown">
-
+                    <a href="javascript:void(0);" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown">
                         <span class="user-img">
-                            <img src="{{ asset('assets/img/profiles/avator1.jpg') }}" alt="User">
+                            <i class="fas fa-user-circle fa-2x text-secondary"></i>
                             <span class="status online"></span>
                         </span>
                     </a>
 
                     <div class="dropdown-menu menu-drop-user">
-
                         <div class="profilename">
 
                             <div class="profileset">
                                 <span class="user-img">
-                                    <img src="{{ asset('assets/img/profiles/avator1.jpg') }}" alt="User">
+                                    <i class="fas fa-user-circle fa-2x text-secondary"></i>
                                     <span class="status online"></span>
                                 </span>
-
                                 <div class="profilesets">
-                                    <h6>John Doe</h6>
-                                    <h5>Admin</h5>
+                                    <h6>{{ auth()->user()->name }}</h6>
+                                    <h5>{{ [1 => 'Admin', 2 => 'Warehouse', 3 => 'Shop Owner'][auth()->user()->role] ?? '' }}</h5>
                                 </div>
                             </div>
 
                             <hr class="m-0">
 
-                            <a class="dropdown-item" href="profile.html">
-                                <i class="me-2" data-feather="user"></i>
-                                My Profile
+                            <a class="dropdown-item" href="javascript:void(0);">
+                                <i class="me-2" data-feather="user"></i> My Profile
                             </a>
-
-                            <a class="dropdown-item" href="generalsettings.html">
-                                <i class="me-2" data-feather="settings"></i>
-                                Settings
+                            <a class="dropdown-item" href="javascript:void(0);">
+                                <i class="me-2" data-feather="settings"></i> Settings
                             </a>
 
                             <hr class="m-0">
 
-                            <a class="dropdown-item logout pb-0" href="signin.html">
-                                <img src="{{ asset('assets/img/icons/log-out.svg') }}" class="me-2" alt="Logout">
-                                Logout
-                            </a>
+                            <form method="POST" action="/logout">
+                                @csrf
+                                <button type="submit" class="dropdown-item logout pb-0">
+                                    <img src="{{ asset('assets/img/icons/log-out.svg') }}" class="me-2" alt="Logout">
+                                    Logout
+                                </button>
+                            </form>
 
                         </div>
                     </div>
@@ -330,24 +259,24 @@
 
             </ul>
 
-            <!-- Mobile User Menu -->
+            <!-- Mobile user menu -->
             <div class="dropdown mobile-user-menu">
-                <a href="javascript:void(0);"
-                   class="nav-link dropdown-toggle"
-                   data-bs-toggle="dropdown"
-                   aria-expanded="false">
-
+                <a href="javascript:void(0);" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa fa-ellipsis-v"></i>
                 </a>
-
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="profile.html">My Profile</a>
-                    <a class="dropdown-item" href="generalsettings.html">Settings</a>
-                    <a class="dropdown-item" href="signin.html">Logout</a>
+                    <span class="dropdown-item-text fw-bold">{{ auth()->user()->name }}</span>
+                    <a class="dropdown-item" href="javascript:void(0);">My Profile</a>
+                    <a class="dropdown-item" href="javascript:void(0);">Settings</a>
+                    <form method="POST" action="/logout">
+                        @csrf
+                        <button type="submit" class="dropdown-item">Logout</button>
+                    </form>
                 </div>
             </div>
 
         </div>
+        <!-- ==================== End Header ==================== -->
         <!-- ==================== End Header ==================== -->
 
 
